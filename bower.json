@@ -3,7 +3,7 @@
   "homepage": "https://github.com/ArvinChen9539/checkFormTips",
   "description": "用于简单的表单验证提示",
   "main": [
-    "build/main.js"
+    "src/main.js"
   ],
   "keywords": [
     "form",
