@@ -1,0 +1,33 @@
+{
+  "name": "check-form-tips",
+  "homepage": "https://github.com/ArvinChen9539/checkFormTips",
+  "description": "用于简单的表单验证提示",
+  "main": [
+    "build/main.js"
+  ],
+  "keywords": [
+    "form",
+    "check",
+    "tips",
+    "directive"
+  ],
+  "authors": "ArvinChen9539",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": ">=1.5",
+    "layer": "*"
+  },
+  "devDependencies": {
+    "angular-mocks": ">=1.5",
+    "layer": "*"
+  },
+  "resolutions": {
+    "angular": "1.6.1",
+    "layer": "3.0.3"
+  }
+}
