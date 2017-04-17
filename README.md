@@ -1,5 +1,5 @@
 # 用于表单验证
-#安装
+# 安装
 * `bower check-form-tips`
 * `angular.module('app', ['check-form-tips'])`
 * 校验配置使用angular原生的表单校验方式  如`required`,`ngpattern`等
