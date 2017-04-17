@@ -5,6 +5,7 @@
 * 校验配置使用angular原生的表单校验方式  如`required`,`ngpattern`等
 # 使用
 * `msg-options` 用于自定义提示消息
+* `<input name='code'/>` name属性是必须的,用于确定唯一的表单元素
 ```html
 <div>
     <form novalidate name="saveForm">
