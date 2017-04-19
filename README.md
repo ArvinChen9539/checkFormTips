@@ -2,7 +2,7 @@
 # 安装
 * `bower install check-form-tips`
 * `angular.module('app', ['check-form-tips'])`
-* 校验配置使用angular原生的表单校验方式  如`required`,`ngpattern`等
+* 校验配置使用angular原生的表单校验方式  如`required`,`ng-pattern`等
 # 使用
 * `msg-options` 用于自定义提示消息
 * `<input name='code'/>` name属性是必须的,用于确定唯一的表单元素
@@ -61,3 +61,6 @@
 
         };
 ```
+# 效果
+![post and pre](resultImg/QQ图片20170419162848.png)
+![post and pre](resultImg/QQ图片20170419162926.png)
