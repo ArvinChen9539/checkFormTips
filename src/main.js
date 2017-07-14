@@ -60,6 +60,7 @@ angular.module('checkFormTips', []).value('VALID_MSG', {
                 selectAll: '@'
             },
             link: function (scope, ele, attrs, parent) {
+                console.log(ele);
                 if (scope.selectAll) {
                     //点击时选中所有文本
                     ele.bind("click", function (event) {//点击时，选中
@@ -72,8 +73,10 @@ angular.module('checkFormTips', []).value('VALID_MSG', {
                 }
                 scope.checkOptions = parent.scope.myForm[attrs.name];
 
-                //监听用户输入
-                scope.$watch('checkOptions.$viewValue+checkOptions.$flag', function (data) {
+                /**
+                 * 检查表单数据
+                 */
+                scope.checkValue = function () {
                     //判断是否有错误信息
                     if (scope.checkOptions && (scope.checkOptions.$dirty || parent.scope.submited) && scope.checkOptions.$invalid) {
                         var msg = '数据异常';
@@ -122,6 +125,18 @@ angular.module('checkFormTips', []).value('VALID_MSG', {
                             layer.close(scope.tips);
                         });
                     }
+                };
+
+                /**
+                 * 失去焦点时校验
+                 */
+                angular.element(ele).on('blur', (function (data) {
+                    scope.checkValue();
+                }));
+
+                //监听用户输入
+                scope.$watch('checkOptions.$flag', function (data) {
+                    scope.checkValue();
                 }, true);
             }
         };
