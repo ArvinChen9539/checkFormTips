@@ -60,7 +60,6 @@ angular.module('checkFormTips', []).value('VALID_MSG', {
                 selectAll: '@'
             },
             link: function (scope, ele, attrs, parent) {
-                console.log(ele);
                 if (scope.selectAll) {
                     //点击时选中所有文本
                     ele.bind("click", function (event) {//点击时，选中
