@@ -23,7 +23,7 @@ angular.module('checkFormTips', []).value('VALID_MSG', {
     pattern: "请输入有效的字符",
     confirmPassword: "两次密码输入不一致",
     maxlength: function (num) {
-        return _.isNumber(num) ? '不能超过' + num + '个字符' : num;
+        return  '不能超过' + num + '个字符';
     },
     defaultMsg: '请按要求填写!'
 }).controller('checkTipsHomeCtrl', ['$scope', function ($scope) {
